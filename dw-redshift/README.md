@@ -2,9 +2,9 @@
 
 **Após o uso, todos os recursos utilizados na plataforma AWS foram devidamente excluídos, por tanto os acessos que podem estar presentes nas imagens, não funcionarão**
 
-### Fluxograma:
-<div align='left'>
-   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/30115cd0-eedf-4dfa-99ce-989f1bfa11df' height='300'/>
+### Fluxograma:<br>
+<br><div align='left'>
+   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/42e3601e-fdbc-43e0-b701-5d69f09ab7b8'>
 <div/>
 
 
