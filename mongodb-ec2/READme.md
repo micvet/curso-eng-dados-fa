@@ -51,7 +51,36 @@
    <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/c9cd416d-6f03-4321-94a6-9d93f0bced19' height='350'/>
 <div/><br> 
 
-9) Existem vários comandos que podemos utilizar.
+9) Para criação do banco de dados, collection e consultas, foram utilizados os seguintes scripts:
+
+    * [Scripts](https://github.com/micvet/curso-eng-dados-fa/blob/main/mongodb-ec2/scripts/Scripts%20utilizados.pdf)<br>
+  
+10) Para popular a collection, foram utilizados dados fakes:
+    * [Dados](https://github.com/micvet/curso-eng-dados-fa/blob/main/mongodb-ec2/dados/dados.json)<br>
+   
+11) Por fim, utilizamos o mongoimport para importar dados de um [JSON](https://github.com/micvet/curso-eng-dados-fa/blob/main/mongodb-ec2/dados/posts.json) e popular um banco de dados. Para isso, foi necessário sair da sessão do mongosh e digitar o seguinte comando no terminal da instância:<br>
+    *mongoimport -d NomeDoBD  --legacy -c NomeDaCollection --file=NomeDoArquivo <br>
+
+Os parâmetros que foram utilizados indicam, respectivamente:
+
+   * Nome do BD de destino (se nao existir, será criado);
+   * Legacy se refere ao formato do arquivo de importação, que é legado;
+   * Nome da coleção
+   * Nome do arquivo que será importado. Caso não esteja na pasta em que o arquivo está, será necessário incluir o diretório completo<br>
+
+   <div align='left'>
+   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/122ac20b-e31a-480a-aedc-265c92c59444' height='50'/>
+<div/><br> 
+
+   Existem vários parâmetros que podem ser utilizados na importação. Para verificá-los, use mongoimport --help.<br>
+
+12) Após realizada a importação, podemos nos conectar novamente ao mongosh e verificar os dados inseridos:
+
+<div align='left'>
+   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/d6f946c6-88a2-430e-81e5-71ccea2036b7' height='350'/>
+<div/><br> 
+
+
 
 
 
