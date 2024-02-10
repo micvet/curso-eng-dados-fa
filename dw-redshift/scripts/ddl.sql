@@ -1,3 +1,5 @@
+CREATE DATABASE DE;
+
 set datestyle to 'SQL,DMY';
 
 CREATE TABLE Vendedores(
