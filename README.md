@@ -4,7 +4,7 @@ Repositório criado para alocar os arquivos e anotações referentes ao curso [F
 
 ## 1) [Data Warehouse moderno - Trabalhando com AWS Redshift](https://github.com/micvet/curso-eng-dados-fa/tree/main/dw-redshift)
 
-### Fluxograma:
-<div align='left'>
-   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/e45ce340-6241-4cea-a991-87b12e28253d' height='100'/>
+### Fluxograma:<br>
+<br><div align='left'>
+   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/42e3601e-fdbc-43e0-b701-5d69f09ab7b8'>
 <div/>
