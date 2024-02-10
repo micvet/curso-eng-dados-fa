@@ -1,5 +1,6 @@
 ## Neste módulo, realizamos a criaçao de um cluster no [AWS Redshift](https://us-east-2.console.aws.amazon.com/redshiftv2/home?region=us-east-2#landing), onde foi criado um banco de dados e tabelas populadas com dados de arquivos CSV armazenados no [Bucket S3](https://s3.console.aws.amazon.com/s3/buckets?region=sa-east-1), utilizando o comando copy. Com os dados, geramos uma tabela desnormalizada utilizando conceitos da [modelagem multimensional](https://medium.com/@aasouzaconsult/modelagem-multidimensional-e65f02bbd60), e por fim,os dados dessa tabela foram utilizados para gerar um relatório no [Google Looker Studio](https://lookerstudio.google.com/).
 
+**Após o uso, todos os recursos utilizados na plataforma AWS foram devidamente excluídos, por tanto os acessos que podem estar presentes nas imagens, não funcionarão**
 
 ### Fluxograma:
 <div align='left'>
