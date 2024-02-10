@@ -1,7 +1,7 @@
 # Neste módulo, realizamos a criaçao de um cluster no AWS Redshift. Então, foi criado um banco de dados e tabelas, que foram populadas com dados de arquivos CSV armazenados no Bucket S3, utilizando o comando copy. Geramos uma tabela desnormalizada, utilizando conceitos da modelagem multimensional, e por fim,os dados dessa tabela foram utilizados para gerar um relatório no Google Looker Studio.
 
 
-![image](https://github.com/micvet/curso-eng-dados-fa/assets/86981990/30115cd0-eedf-4dfa-99ce-989f1bfa11df)
+![image](https://github.com/micvet/curso-eng-dados-fa/assets/86981990/30115cd0-eedf-4dfa-99ce-989f1bfa11df&size=10x100)
 
 
 
