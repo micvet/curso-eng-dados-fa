@@ -1,21 +1,21 @@
 # Neste módulo, realizamos a criaçao de um cluster no AWS Redshift. Então, foi criado um banco de dados e tabelas, que foram populadas com dados de arquivos CSV armazenados no Bucket S3, utilizando o comando copy. Geramos uma tabela desnormalizada, utilizando conceitos da modelagem multimensional, e por fim,os dados dessa tabela foram utilizados para gerar um relatório no Google Looker Studio.
 
 
-![image](https://github.com/micvet/curso-eng-dados-fa/assets/86981990/30115cd0-eedf-4dfa-99ce-989f1bfa11df&size=10x100)
+### Fluxograma:
+![image](https://github.com/micvet/curso-eng-dados-fa/assets/86981990/30115cd0-eedf-4dfa-99ce-989f1bfa11df)
 
 
 
 ## Passo a passo:
 
 1. Criação do bucket no S3 e ingestão dos arquivos CSV:
-   No S3, busque pelo bucket e selecione a opção para criar um novo. 
-![image](https://github.com/micvet/curso-eng-dados-fa/assets/86981990/8b58b8f0-7451-4214-9d16-6091e6955136)
+   No S3, selecione a opção de criar um novo bucket. 
 
-2. Crie uma nova pasta e realize o upload dos arquivos CSV:
+2. Crie uma nova pasta no bucket e realize o upload dos arquivos CSV:
 
-![image](https://github.com/micvet/curso-eng-dados-fa/assets/86981990/875fe71b-7905-4016-aacb-00659f2074a6)  |  ![image](https://github.com/micvet/curso-eng-dados-fa/assets/86981990/19d4bf35-4dd7-4e69-bbe0-002ca344d203)
+![image](https://github.com/micvet/curso-eng-dados-fa/assets/86981990/19d4bf35-4dd7-4e69-bbe0-002ca344d203)
 
-3. Busque pelo serviço do Redshift e selecione a opçao para criar um novo cluster:
+3. Posteriormente, busque pelo serviço do Redshift e selecione a opçao para criar um novo cluster:
 
 ![image](https://github.com/micvet/curso-eng-dados-fa/assets/86981990/16273dfb-48cb-4c1f-8dbb-11f0028bbff7)
 
@@ -25,9 +25,7 @@
 
 ![image](https://github.com/micvet/curso-eng-dados-fa/assets/86981990/0a50a707-9631-4ed3-a3fe-8d018ef713b7)
 
-5. Após criado, selecione o cluster e vá até a aba Editor de Consultas V2:
-
-![image](https://github.com/micvet/curso-eng-dados-fa/assets/86981990/739554ae-c1a9-48ea-a142-25fa81ba2f3a)
+5. Após criado, selecione o cluster e vá até a aba Editor de Consultas V2.
 
 6. Será aberto um editor de queries, que será utilizado para a criação do banco de dados e tabelas:
 
@@ -38,7 +36,7 @@
    ddl
 
 8. Com a estrutura criada, o load dos arquivos será realizado por meio do copy. Para isso, são necessárias algumas configurações e dados dos arquivos de origem.
-  - Primeiramente, crie uma chave de acesso, selecionando a opção Credenciais de Segurança nas opções da sua conta;
+  - Primeiramente, crie uma chave de acesso, selecionando as Credenciais de Segurança nas opções da sua conta;
 
   ![image](https://github.com/micvet/curso-eng-dados-fa/assets/86981990/6996af55-60cd-452f-8535-c6d444e9a2bf)
 
@@ -52,11 +50,11 @@
 
   ![image](https://github.com/micvet/curso-eng-dados-fa/assets/86981990/b6d6eb92-18d5-4547-83ea-18efeb174dde)
 
-10. De volta ao Redshift, utilizaremos os dados da URI, chave de acesso e chave de acesso secreta para popular as tabelas anteriormente criadas:
+10. De volta ao Redshift, utilizaremos os dados da URI, chave de acesso e chave de acesso secreta para popular as tabelas anteriormente criadas, por meio do script abaixo. Ele deve ser repetido para popular cada tabela, alterando-se os dados de URI e nome da tabela, conforme necessário:
 
   - script Load Data
 
-11. Após verificar que os dados foram devidamente carregados, crie uma tabela multidimensional, que servirá de base para a criaçao da view:
+11. Após verificar que os dados foram devidamente carregados, crie uma tabela multidimensional (tabela fato), que servirá de base para a criaçao da view:
 
     - Tabela Desnormalizada
 
