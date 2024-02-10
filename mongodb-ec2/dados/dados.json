@@ -1,0 +1,31 @@
+    {
+        nome: "João", 
+        idade: 30, 
+        cidade: "São Paulo", 
+        interesse: "futebol" 
+        },
+    { 
+        nome: "Maria", 
+        idade: 25, 
+        cidade: "Rio de Janeiro", 
+        interesse: "cinema" 
+    },
+    {
+        nome: "Carlos", 
+        idade: 35, 
+        cidade: "Belo Horizonte", 
+        interesse: "tecnologia" 
+    },
+    
+    {   
+        nome: "Ana",
+        idade: 28, 
+        cidade: "Porto Alegre", 
+        interesse: "dança" 
+    },
+    {
+        nome: "Pedro", 
+        idade: 40, 
+        cidade: "Brasília", 
+        interesse: "política" 
+    }
