@@ -1,6 +1,6 @@
 # Curso Formação Engenharia de Dados: Domine Big Data
 
-Repositório criado para alocar os arquivos e anotações referentes ao curso [Formação Engenharia de Dados: Domine Big Data](https://www.udemy.com/course/engenheiro-de-dados/). <br>
+Repositório criado para alocar scripts, arquivos e anotações referentes ao curso [Formação Engenharia de Dados: Domine Big Data](https://www.udemy.com/course/engenheiro-de-dados/). <br>
 
 Os módulos estão listados abaixo. Basta selecioná-los para verificar mais detalhes.<br>
 
