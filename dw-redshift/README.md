@@ -24,7 +24,7 @@
 <br> 3. Posteriormente, busque pelo serviço do Redshift e selecione a opção para criar um novo cluster:
 
 <div align='left'>
-   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/16273dfb-48cb-4c1f-8dbb-11f0028bbff7' height='100'/>
+   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/16273dfb-48cb-4c1f-8dbb-11f0028bbff7' height='80'/>
 <div/>
 
 
@@ -43,7 +43,7 @@
 <br> 6. Será aberto um editor de queries, que será utilizado para a criação do banco de dados e tabelas:
 
 <div align='left'>
-   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/7d17ae45-1a15-4ab1-89b4-1c4efd0d49b0' height='300'/>
+   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/7d17ae45-1a15-4ab1-89b4-1c4efd0d49b0' height='250'/>
 <div/>
 
 <br> 7. Utilize o arquivo disponibilizado ddl para criaçao da estrutura do BD e tabelas:
@@ -61,7 +61,7 @@
   - Criando chave de acesso:
 
 <br><div align='left'>
-   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/978b8425-b8df-4f9d-bfb1-f95022991798' height='300'/>
+   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/978b8425-b8df-4f9d-bfb1-f95022991798' height='250'/>
 <div/>
 
 
@@ -99,7 +99,7 @@
    - Verifique se as regras do Grupo de Segurança atendem aos requisitos para acesso externo:
     
 <br> <div align='left'>
-   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/2cb25548-ac15-45ce-ad7e-c1b57a368ae0' height='300'/>
+   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/2cb25548-ac15-45ce-ad7e-c1b57a368ae0' height='250'/>
 <div/>
 
    
@@ -114,7 +114,7 @@
   - Proceda com a criação do relatório.
 
 <br> <div align='left'>
-   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/4189c99b-0d4c-41fe-a3f0-b2a9f5e9decd' height='300'/>
+   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/4189c99b-0d4c-41fe-a3f0-b2a9f5e9decd' height='250'/>
 <div/>
 
   
