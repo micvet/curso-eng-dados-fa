@@ -2,7 +2,7 @@
 
 Repositório criado para alocar scripts, arquivos e anotações referentes ao curso [Formação Engenharia de Dados: Domine Big Data](https://www.udemy.com/course/engenheiro-de-dados/). <br>
 
-Os módulos estão listados abaixo. Basta selecioná-los para verificar mais detalhes.<br>
+Os módulos do curso estão listados abaixo. Basta selecioná-los para verificar mais detalhes nos respectivos diretórios :blush: .<br>
 
 ## 1) [Data Warehouse moderno - Trabalhando com AWS Redshift](https://github.com/micvet/curso-eng-dados-fa/tree/main/dw-redshift)
 
