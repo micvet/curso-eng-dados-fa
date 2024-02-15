@@ -10,7 +10,6 @@
 - [Python](https://www.python.org/)
 - [Documentação do redis-py](https://redis-py.readthedocs.io/)
 
-- 
 ### Passo a passo:
 
 1) Criação da instância EC2 na AWS:<br>
@@ -45,7 +44,6 @@
    <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/fa86218c-4d6e-46d6-bcd0-7158788f72db' height='350'/>
 <div/><br> 
 
-
 3) Após acessar o terminal, realize as instalações necessárias:
    * Para instalar o Redis:
      * sudo snap install redis
@@ -72,6 +70,24 @@
 <div align='left'>
    <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/24644c51-2325-4fe4-9469-7b34e8895960' height='350'/>
 <div/><br>
+
+   * Na primeira função, os parâmetros incluem a conexão com o Redis e o valor que será inserido na descrição da tarefa. O id da tarefa será definido de forma incremental.
+   * Por fim, na função Main, é criado um menu interativo, onde após selecionar a opção desejada e preencher os dados solicitados, os dados de entrada serão utilizados como parâmetro ao chamar a respectiva função.
+   * Todos os dados criados são inseridos no banco de dados Redis local.
+
+6) Verificando os dados inseridos por meio do programa, diretamente no Redis:
+   * Acesse o Redis:
+     * redis-cli
+     * get tarefa:1
+     * get tarefa:2
+       
+<div align='left'>
+   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/ca5e09b9-98d5-4384-bc88-fd37682622b4' height='100'/>
+<div/><br>
+
+  7) [Alguns comandos úteis](https://github.com/micvet/curso-eng-dados-fa/blob/main/redis-ec2/scripts/comandos_uteis.txt) :smile:
+  
+   
  
 
      
