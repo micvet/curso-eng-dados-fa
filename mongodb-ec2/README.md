@@ -25,10 +25,18 @@
    <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/540d5899-2c49-4673-9207-4f0a4f4cf428' height='350'/>
 <div/><br>  
 
-2) Após a instância subir,  vamos nos conectar pelo terminal, via SSH. No EC2, ao selecionar a opção de se conectar à instância, é possível selecionar algumas opções. Selecione "Cliente SSH" para verificar os parâmetros necessários. O exemplo que ele fornece já deve funcionar, caso vc esteja com o terminal aberto no diretório em que se encontra a chave na sua máquina
+2) Após a instância subir,  vamos nos conectar pelo terminal, via SSH. Para isso, no EC2, ao selecionar a opção de se conectar à instância, é possível selecionar algumas opções. Selecione "Cliente SSH" para verificar os parâmetros necessários. 
 
 <div align='left'>
    <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/ff820482-3244-4601-93da-58c1bc5d495c' height='350'/>
+<div/><br> 
+
+
+* O exemplo fornecido (na parte inferior da opção de conectar-se àinstância) já deve funcionar. Basta executar o terminal, acessar o diretório em que se encontra a chave e executar o comando.<br>
+
+
+<div align='left'>
+   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/fa86218c-4d6e-46d6-bcd0-7158788f72db' height='350'/>
 <div/><br> 
 
 3) Com a conexão estabelecida, baixe o unzip no terminal:
