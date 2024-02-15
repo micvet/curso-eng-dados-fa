@@ -20,4 +20,14 @@ Os módulos do curso estão listados abaixo. Basta selecioná-los para verificar
    <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/57853741-f0a3-48e5-b50c-d00ac03dbdf9' height='200'>
 <div/><br>
 
+## 3) [NoSQL Chave-Valor com Redis e EC2](https://github.com/micvet/curso-eng-dados-fa/tree/main/redis-ec2)
+
+### Fluxograma: <br>
+
+<br><div align='left'>
+   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/23b877c1-2b25-4cc8-bbf9-ab41595ad401' height='200'>
+<div/><br>
+
+
+
 
