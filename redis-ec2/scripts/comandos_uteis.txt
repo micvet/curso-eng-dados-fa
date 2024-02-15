@@ -1,0 +1,78 @@
+Manipulação de Strings:
+• SET key value: Define o valor da chave especificada.
+• MSET key value key value key value: inserir várias chaves e valores. Atualiza valores se já houverem outros idênticos.
+• GET key: Retorna o valor armazenado na chave especificada.
+• GETRANGE key 0 9: retorna um intervalo do valor (no exemplo, de 0 a 9)
+• GET SET key "new value" : atualiza o valor de uma key
+• MGET key key key : retorna o valor de várias keys
+• SRTLEN key: retorna o tamanho do registro
+• DEL key: Exclui a chave especificada.
+• INCR key: Incrementa o valor inteiro armazenado na chave especificada.
+• APPEND key value: Anexa o valor especificado ao final do valor existente da chave.
+• EXISTS key: verificar se a chave existe.
+• TYPE key: verifica o tipo de dados da chave
+• SET key value EX 60 NX (vai expirar em 60 segundos. | PX: milesegundos | NX: só funciona se a chave não existir | XX só funciona se a chave já existir)
+• EXPIRE key tempo: definir o tempo de expiração de uma chave depois de ela já ter sido atribuída, em segundos.
+• PTTL key: verificar o tempo que falta para expiração de uma chave em milesegundos
+• TTL key: verificar o tempo de expiração em segundos
+• PERSIST key: remover  tempo de expiração
+
+Manipulação de Listas:
+• LPUSH key value: Insere um ou mais valores no início de uma lista.
+• RPUSH key value: Insere um ou mais valores no final de uma lista.
+• LRANGE key start stop: Retorna os elementos de uma lista dentro do intervalo especificado.
+• LPOP key: Remove e retorna o primeiro elemento de uma lista.
+• RPOP key: Remove e retorna o último elemento de uma lista.
+• LINSERT key BEFORE/AFTER value NEWvalue: insere um novo valor anter ou depois de outro especificado
+• LSET key  index 'new value'(ex. LSET 4545 2 Novo): atualiza um valor com base no index
+• LINDEX key index: retorna um valor com base no index
+• LLEN key: tamanho da lista
+• LPOP key: remove o elemento do inicio da lista
+• RPOP key: remove o elemento do fim da lista
+
+Manipulação de Conjuntos (não permite elementos repetidos, não é ordenada):
+• SADD key value value value: insere valores a um conjuntomset
+• SADD key member: Adiciona um ou mais membros a um conjunto.
+• SREM key member: Remove um ou mais membros de um conjunto.
+• SMEMBERS key: Retorna todos os membros de um conjunto.
+• SISMEMBER key member: Verifica se um membro está presente em um conjunto.
+• SINTER key1 key2 [... keyN]: Retorna a interseção de vários conjuntos.
+• SCARD key: retorna a quantidade de membros de um conjunto
+• SDIFF key key: mostra a diferença entre dois conjuntos
+• SINTER: key key: mostra os elementos iguais em dois conjuntos (intersecção de dois conjuntos)
+Conjuntos ordenados (também não aceitam elementos repetidos e são baseados em score):
+• ZADD key score value: adiciona um elemento em um conjunto , com um score
+• ZCARD key: retorna o número de elementos de um conjunto
+• ZRANK key value: retorna o index de um valor
+• ZCOUNT key value value: conta o número de valores entre dois outros valores do conjunto
+• ZSCORE key value: retorna o score de um valor
+• ZRANGE key score score: retorna os valores do conjunto que estão entre o range de score atribuído
+• ZRANGE key score score WITHSCORES: igual ao ZRANGE, mas retorna também o valor do score
+• ZREM key value: remove o valor 
+
+
+Manipulação de Hashes (conjuntos de campos e valores associados a uma chave):
+• HMSET key field value field value field value: define um conjunto de campos e valores associados a uma chave
+• HSET key field value: Define um campo em um hash com o valor especificado.
+• HGET key field: Retorna o valor de um campo específico em um hash.
+• HMGET key field field: recupera valores de vários campos
+• HVALS key: retorna todos os campos de uma chave
+• HDEL key field: Exclui um ou mais campos de um hash.
+• HGETALL key: Retorna todos os campos e valores de um hash.
+• HKEYS key: Retorna todos os campos em um hash.
+Operações de Conjunto Classificado (Sorted Sets):
+• ZADD key score member: Adiciona um membro com uma pontuação a um conjunto classificado.
+• ZREM key member: Remove um membro de um conjunto classificado.
+• ZRANGE key start stop [WITHSCORES]: Retorna membros de um conjunto classificado dentro de um intervalo, opcionalmente com as pontuações.
+• ZSCORE key member: Retorna a pontuação de um membro em um conjunto classificado.
+• ZCOUNT key min max: Conta o número de membros em um conjunto classificado dentro de um intervalo de pontuação.
+• HEXISTS key field: verifica se o campo existe
+• HLEN key: retorna a quantidade de chaves que a chave tem
+• HKEYS key: retorna a quantidade de campos que a chave tem.
+
+
+Transações:
+
+• MULTI:  equivale ao begin de bancos relacionais
+• EXEC: equivale ao commit. Executa todos os comandos depois do multi.
+• DISCARD: descarta todas as transações depois do multi. Equivale ao rollback
