@@ -25,7 +25,7 @@ Os módulos do curso estão listados abaixo. Basta selecioná-los para verificar
 ### Fluxograma: <br>
 
 <br><div align='left'>
-   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/23b877c1-2b25-4cc8-bbf9-ab41595ad401' height='200'>
+   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/23b877c1-2b25-4cc8-bbf9-ab41595ad401' height='300'>
 <div/><br>
 
 
