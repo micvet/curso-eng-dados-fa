@@ -1,1 +1,13 @@
 
+from pyspark.sql import SparkSession
+carros = spark.read.csv("/FileStore/tables/Carros-5.csv", header=True, sep=";",inferSchema=True)
+carros.show(5)
+carros.schema
+carros.count()
+carros.columns
+carros.select("Consumo","Cilindros").show(5)
+from pyspark.sql import functions as Func
+carros.select("Consumo","Cilindros").where(Func.col("Cilindros") > 6).show()
+carros.orderBy("HP").show(5)
+carros.orderBy(Func.col("HP").desc()).show(5)
+
