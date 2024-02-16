@@ -11,3 +11,43 @@ carros.select("Consumo","Cilindros").where(Func.col("Cilindros") > 6).show()
 carros.orderBy("HP").show(5)
 carros.orderBy(Func.col("HP").desc()).show(5)
 
+
+
+from pyspark.ml.regression import LinearRegression, RandomForestRegressor
+from pyspark.ml.evaluation import RegressionEvaluator
+from pyspark.ml.feature import VectorAssembler
+
+
+#importa
+Carros_temp = spark.read.csv("/FileStore/tables/Carros-5.csv",inferSchema=True, header=True, sep=";")
+Carros_temp.show(5)
+
+
+#separa colunas
+Carros = Carros_temp.select("Consumo","Cilindros","Cilindradas","HP")
+Carros.show(5)
+
+#vetoriza atributos
+veccaracteristicas = VectorAssembler(inputCols=[("Consumo"),("Cilindros"),("Cilindradas")],outputCol="caracteristicas")
+
+Carros = veccaracteristicas.transform(Carros)
+Carros.show(5)
+#divide treino e teste
+CarrosTreino, CarrosTeste = Carros.randomSplit([0.7,0.3])
+print(CarrosTreino.count())
+print(CarrosTeste.count())
+
+#modelo
+reglin = LinearRegression(featuresCol="caracteristicas", labelCol="HP")
+modelo = reglin.fit(CarrosTreino)
+
+#prever
+previsao = modelo.transform(CarrosTeste)
+previsao.show(5)
+
+#avaliar performance
+avaliar = RegressionEvaluator(predictionCol="prediction", labelCol="HP",metricName='rmse')
+rmse = avaliar.evaluate(previsao)
+print(rmse)
+
+
