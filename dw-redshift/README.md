@@ -1,4 +1,4 @@
-# Data warehouse com Redshift 
+# Data Warehouse moderno - Trabalhando com AWS Redshift
 
 Neste módulo, realizamos a criação de um cluster no [AWS Redshift](https://us-east-2.console.aws.amazon.com/redshiftv2/home?region=us-east-2#landing), onde foi desenvolvido um banco de dados, com tabelas que foram populadas com dados de arquivos CSV armazenados no [Bucket S3](https://s3.console.aws.amazon.com/s3/buckets?region=sa-east-1), utilizando o comando Copy. Com os dados, geramos uma tabela desnormalizada utilizando conceitos da [modelagem multidimensional](https://medium.com/@aasouzaconsult/modelagem-multidimensional-e65f02bbd60), e por fim, os dados dessa tabela foram utilizados para gerar um relatório no [Google Looker Studio](https://lookerstudio.google.com/).<br>
 
