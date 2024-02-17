@@ -53,7 +53,7 @@
 
 5) O próximo passo é estabelecer uma conexão externa com o banco criado. Será utilizado o colab, do Google, com a linguagem Python.<br>
 
-   * Estabelecendo a conexão:
+* Estabelecendo a conexão:
   
 ```
 import psycopg2 #biblioteca para conectar e interagir com bd postgres
@@ -79,9 +79,84 @@ cur.execute('create table arquivos (idarquivo INT, nomearquivo VARCHAR(256));')
 con.close()
 ```
 
-    
+6) O próximo passo é estabelecer uma conexão com o bucket. Para isso, ainda no Colab, usaremos a lib boto3. Usaremos a linguagem Shell, e para isso, basta sinalizar uma exclamação (!), antes de iniciar o comando.
 
-    
+```
+!pip install boto3
+```
+* Com o boto3 instalado, vamos testar a conexão com o bucket. O objetivo é acessar o bucket e iterar nos arquivos contidos, retornando seus nomes.<br>
+* Nesta etapa, serão necessários alguns dados, como a região, sua chave de acesso e chave de acesso secreta.
+```
+import boto3
+import io
+import psycopg2
+
+s3 = boto3.resource(
+    service_name='s3',
+    region_name = 'sa-east-1',
+    aws_access_key_id = 'SUA-CHAVE-DE-ACESSO',
+    aws_secret_access_key = 'SUA-CHAVE-DE-ACESSO-SECRETA'
+    )
+
+bucket = 'mybucketcursode' #NOME DO SEU BUCKET
+prefix = 'imagens/' #PASTA QUE FOI CRIADA COM OS ARQUIVOS
+
+for objects_s3 in s3.Bucket(bucket).objects.filter(Prefix=prefix):
+  if objects_s3.key.endswith('jpg') or objects_s3.key.endswith('JPG'):
+    filename = objects_s3.key.split('/')[1]
+    print(filename)
+
+```  
+* Agora, após verificar que a conexão é estabelecida com sucesso, iremos utilizar a conexão para ler dados nos arquivos do bucket e inseri-los no banco de dados criado anteriormente.
+
+```
+s3 = boto3.resource(
+    service_name='s3',
+    region_name = 'sa-east-1',
+    aws_access_key_id = 'AKIA5FTZDWTFQQEKL7PR',
+    aws_secret_access_key = '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'
+    )
+
+bucket = 'mybucketcursode'
+prefix = 'imagens/'
+
+con = psycopg2.connect(host='database-1.clim6smom0jt.sa-east-1.rds.amazonaws.com',database='inventario',
+                       user='postgres',password='12345678')
+con.autocommit = True
+cur = con.cursor()
+id = 0
+
+for objects_s3 in s3.Bucket(bucket).objects.filter(Prefix=prefix):
+  if objects_s3.key.endswith('jpg') or objects_s3.key.endswith('JPG'):
+    filename = objects_s3.key.split('/')[1]
+    print(filename)
+    id += 1
+    cur.execute("insert into arquivos (idarquivo,nomearquivo) values (" +str(id)+ ",'" + filename + "')") #Será gerado um id atribuido a cada item
+
+con.close()
+```
+
+* E agora vamos verificar se os dados foram inseridos corretamente:
+
+```
+con = psycopg2.connect(host='INSIRA-O-HOST-DO-SEU-BD',database='inventario',user='SEU-USER-DO-BD',password='SUA-SENHA-DO-BD')
+
+con.autocommit = True
+cur = con.cursor()
+
+cur.execute('select * from arquivos;')
+recset = cur.fetchall() #fetchall é um método para retornar todos os dados.
+for rec in recset:
+  print(rec)
+con.close()
+```
+* Resultado:
+<br><div align='left'>
+   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/f71c274a-04db-477a-824b-3fbfb1b18adb' height='350'/>
+<div/><br>  
+
+* Script utilizados:
+  * [Script](https://github.com/micvet/curso-eng-dados-fa/blob/main/de-python/scripts/ScriptEngDados.ipynb)   
 
 
 
