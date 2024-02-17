@@ -20,17 +20,39 @@
 
 * Na barra de buscas da AWS, busque pelo RDS e selecione a opção "Criar Banco de Dados".
 * Selecione a Criação Padrão, PostgreSQL e modelo de nível gratuíto.
+* Anote o usuário e senha que definir.
 * A maioria das demais configurações podem se manter padrão. Com exceção do Acesso Público, onde deverá ser feita a seleção para "Sim".
 
 <div align='left'>
    <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/bbcc3565-fe41-4fdb-a1f1-6bed10a2311a' height='250'/>
 <div/><br> 
    
-* Para acesso, utilizaremos o endpoint, a porta, o usuário e senha criados. <br>
+4) Para acesso, precisaremos do endpoint, da porta, do usuário e senha criados no banco de dados Postgress e das credencias de Chave de Acesso. <br>
+* Endpoin e porta do BD:<br>
 
 <div align='left'>
    <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/8f286f81-1296-4f8f-84e5-18d52caba132' height='250'/>
 <div/><br>  
+  
+* Caso você não tenha a Chave de Acesso, pode obter uma por meio das opções de credenciais de segurança:<br>
+
+    - Após selecionar a opção Credenciais de Segurança, role a tela até a opção Chaves de Acesso e selecione a opção de criar uma. Copie e guarde a chave de acesso e chave de acesso secreta que serão geradas.<br>
+<br><div align='center'>
+   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/6996af55-60cd-452f-8535-c6d444e9a2bf' height='150'/>
+<div/><br>
+    
+<div align='left'>
+   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/978b8425-b8df-4f9d-bfb1-f95022991798' height='250'/>
+<div/><br>
+
+
+    
+
+
+    
+
+    
+
 
 
 
