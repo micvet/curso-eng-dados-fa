@@ -4,7 +4,8 @@ Neste módulo, foi realizada a criaçao de uma instância no [AWS EC2](https://u
 
 ### Fluxograma:  
 
-![image](https://github.com/micvet/curso-eng-dados-fa/assets/86981990/57853741-f0a3-48e5-b50c-d00ac03dbdf9)
+![image](https://github.com/micvet/curso-eng-dados-fa/assets/86981990/bdb94201-b6db-4467-8a61-94470a5eee76)
+
 
 ### Passo a Passo:  
 
