@@ -45,7 +45,28 @@
    <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/978b8425-b8df-4f9d-bfb1-f95022991798' height='250'/>
 <div/><br>
 
+* As regras de segurança também devem estar habilitadas para permitir a comunicação das aplicações:<br>
 
+<div align='left'>
+   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/f2fefe18-d4e6-47dc-a0a3-c2d37d53ccb3' height='170'/>
+<div/><br>
+
+5) O próximo passo é estabelecer uma conexão externa com o banco criado. Será utilizado o colab, do Google, com a linguagem Python.<br>
+
+   * Estabelecendo a conexão:
+  
+```
+import psycopg2 #biblioteca para conectar e interagir com bd postgres
+con = psycopg2.connect(host='INSIRA-O-HOST-DO-SEU-BD',database='postgres',
+user='SEU-USER-DO-BD',password='SUA-SENHA-DO-BD')
+con.autocommit = True #transações sendo comitadas automaticamente
+cur = con.cursor() #objeto de interação com o BD 
+```
+* A primeira alteração que faremos é a criação de um novo banco de dados chamado "inventário:
+```
+cur.execute('create database inventario;')
+con.close()
+```
     
 
 
