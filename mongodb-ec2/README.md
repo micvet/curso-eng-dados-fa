@@ -1,4 +1,6 @@
-## Neste módulo, foi realizada a criaçao de uma instância no [AWS EC2](https://us-east-2.console.aws.amazon.com/ec2/home?region=us-east-2), e posteriormente, o acesso a essa mesma instância pelo terminal, via SSH. Foi criado então um banco de dados com o [MongoDB](https://www.mongodb.com/pt-br), e realizadas algumas operações de inserção de dados, alterações e consultas, para fixar o aprendizado. 
+# NoSQL Orientado a documentos com MongoDB e EC2
+
+Neste módulo, foi realizada a criaçao de uma instância no [AWS EC2](https://us-east-2.console.aws.amazon.com/ec2/home?region=us-east-2), e posteriormente, o acesso a essa mesma instância pelo terminal, via SSH. Foi criado então um banco de dados com o [MongoDB](https://www.mongodb.com/pt-br), e realizadas algumas operações de inserção de dados, alterações e consultas, para fixar o aprendizado. 
 
 ### Fluxograma:  
 
