@@ -28,6 +28,12 @@ Os módulos do curso estão listados abaixo. Basta selecioná-los para verificar
    <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/23b877c1-2b25-4cc8-bbf9-ab41595ad401' height='300'>
 <div/><br>
 
+## 4) [Engenharia de dados com Python](https://github.com/micvet/curso-eng-dados-fa/tree/main/de-python)
+
+### Fluxograma:  <br> 
+<div align='left'>
+   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/93742217-1f62-456b-9946-088c796a62d7' height='250'/>
+<div/><br> 
 
 
 
