@@ -66,9 +66,18 @@ cur = con.cursor() #objeto de interação com o BD
 ```
 cur.execute('create database inventario;')
 con.close()
+``` 
+* Agora iremos criar a primeira tabela do nosso banco de dados. Iremos usar as mesmas credenciais que foram usadas anteriormente, mas no campo da database, 
+é necessário alterar para a nova database.
 ```
-    
-
+import psycopg2
+con = psycopg2.connect(host='INSIRA-O-HOST-DO-SEU-BD',database='inventario',
+user='SEU-USER-DO-BD',password='SUA-SENHA-DO-BD')
+con.autocommit = True
+cur = con.cursor()
+cur.execute('create table arquivos (idarquivo INT, nomearquivo VARCHAR(256));')
+con.close()
+```
 
     
 
