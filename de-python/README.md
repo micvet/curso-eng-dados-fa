@@ -1,6 +1,10 @@
 ## Engenharia de dados com Python
 
-### Neste módulo....
+### Neste módulo, criamos um script simples para testar o acesso ao bucket e a um banco de dados, ambos na plataforma AWS, no S3 e RDS, respectivamente. Foi utilizado o Google Colab para escrever um código em Python, que permitiu a leitura de dados de arquivos presentes no bucket do S3, para que estes dados forassem salvos no banco de dados PostgreSQL do RDS.<br>
+
+<div align='left'>
+   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/93742217-1f62-456b-9946-088c796a62d7' height='200'/>
+<div/><br> 
 
 * **Após o uso todas as instâncias criadas foram deletadas.**
   
