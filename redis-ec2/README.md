@@ -4,7 +4,8 @@ Neste módulo, aprendemos sobre o banco de dados NoSQL chave-valor Redis. Foi ut
 
 ### Fluxograma: <br>
 
-![image](https://github.com/micvet/curso-eng-dados-fa/assets/86981990/23b877c1-2b25-4cc8-bbf9-ab41595ad401)
+![image](https://github.com/micvet/curso-eng-dados-fa/assets/86981990/2b01197e-6381-4de5-92f3-919f97fc52be)
+
 
 
 ## Links Úteis
