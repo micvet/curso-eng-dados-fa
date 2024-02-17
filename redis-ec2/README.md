@@ -1,4 +1,6 @@
-## Neste módulo, aprendemos sobre o banco de dados NoSQL chave-valor Redis. Foi utilizada uma instância criada no EC2, da Azure, para instalar o banco de dados. Posteriormente, foi criado um código simples em Python para implementar e testar o Redis.
+# NoSQL Chave-Valor com Redis e EC2 <br>
+
+Neste módulo, aprendemos sobre o banco de dados NoSQL chave-valor Redis. Foi utilizada uma instância criada no EC2, da Azure, para instalar o banco de dados. Posteriormente, foi criado um código simples em Python para implementar e testar o Redis.
 
 ### Fluxograma: <br>
 
