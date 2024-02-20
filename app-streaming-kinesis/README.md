@@ -1,6 +1,6 @@
 ## Aplicações em Streaming - Kinesis <br>
 
-Neste módulo aprendemos sobre aplicações streaming e ingestão de seus dados. Criamos um fluxo de stream no AWS Kinesis e dois programas: um responsável por gerar os dados e o segundo, por consumi-lo. Em alteranativa a esse fluxo, criamos também um consumidor no Kinesis Fire House, que permitiu que os dados gerados pelo programa produtor fossem enviados a um bucket no S3.<br>
+Neste módulo aprendemos sobre aplicações streaming e ingestão de seus dados. Criamos um fluxo de stream no AWS Kinesis e dois programas: um responsável por gerar os dados e o segundo, por consumi-lo. Em alteranativa a esse fluxo, criamos também um consumidor no Kinesis Firehose, que permitiu que os dados gerados pelo programa produtor fossem enviados a um bucket no S3.<br>
 
 ### Fluxograma<br>
 
@@ -105,9 +105,9 @@ while shard is not None:
     print(registro["Data"])
 ```
 
-5) Outra opção é criar um consumidor no Kinesis Fire House, que recebe o stream e faz a entrega dos dados para outros serviços. Usaremos o bucket para receber os dados produzidos.
+5) Outra opção é criar um consumidor no Kinesis Firehose, que recebe o stream e faz a entrega dos dados para outros serviços. Usaremos o bucket para receber os dados produzidos.
 
-* Primeiramente, na plataforma AWS, selecione a opção de criar um novo Kinesis Fire House.<br>
+* Primeiramente, na plataforma AWS, selecione a opção de criar um novo Kinesis Firehose.<br>
 <br><div align='left'>
    <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/4fb01f32-367f-4033-88dd-d94b2945553a' height='200'>
 <div/><br>
@@ -118,10 +118,7 @@ while shard is not None:
    <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/f9ca0a23-4272-4d12-a6ac-3e94dd990017' height='300'>
 <div/><br>
 
-
-KDS-S3-nilhy
-
-* Após criar o Fire House com sucesso, altere as configurarações de destino para reduzir o intervalo do buffer, para que os dados sejam retornados mais rapidamente neste teste.<br>
+* Após criar o serviço do Firehose com sucesso, altere as configurarações de destino para reduzir o intervalo do buffer, para que os dados sejam retornados mais rapidamente neste teste.<br>
 
 <br><div align='left'>
    <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/5bafbc89-b330-48ad-81b0-7458a3b9ef65' height='300'>
