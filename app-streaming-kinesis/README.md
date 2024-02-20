@@ -1,6 +1,6 @@
 ## Aplicações em Streaming - Kinesis <br>
 
-Neste módulo aprendemos sobre aplicações streaming e ingestão de seus dados. Criamos um fluxo de stream no AWS Kinesis e dois programas: um responsável por gerar os dados e o segundo, por consumi-lo. Em alteranativa a esse fluxo, criamos também um consumidor no Kinesis Firehose, que permitiu que os dados gerados pelo programa produtor fossem enviados a um bucket no S3.<br>
+Neste módulo aprendemos sobre aplicações streaming e ingestão de seus dados. Criamos um fluxo de stream no AWS Kinesis Data Streams e dois programas: um responsável por gerar os dados e o segundo, por consumi-lo. Assim, os dados eram gerados no programa prod, coletados pelo Kinesis Data Streams e depois consumidos pelo programa cons1 Em alternativa a esse fluxo, criamos também um consumidor no Kinesis Firehose, que permitiu que os dados gerados pelo programa prod, fossem enviados a um bucket no S3 após serem coletados pelo Data Streams.<br>
 
 ### Fluxograma<br>
 
