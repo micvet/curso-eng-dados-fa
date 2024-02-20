@@ -21,8 +21,7 @@ Componentes dentro do Amazon Kinesis:
 
 ### Passo-a-passo do projeto:<br>
 
-1) Primeiramente, foram criados três notebooks usando o Google Colab; um para gerar os dados e envia-los ao Kinesis,o segundo e terceiro para consumir os dados.
-
+1) Primeiramente, foram criados três notebooks usando o Google Colab; um para gerar uma aplicação que irá gera os dados e enviá-los ao Kinesis e o segundo para os consumir.
 
 2) Já na plataforma AWS, busque pelo Kinesis e crie um novo fluxo de dados selecionando a opção Kinesis Data Streams
 
@@ -31,8 +30,8 @@ Componentes dentro do Amazon Kinesis:
 * Mantenha as opções padrão. Para fins de conhecimento, a opção de Capacidade de fluxo de dados sob demanda, se ajuta conforma a necessida, enquanto na provisionada, deve ser alterada manualmente.
 * Após o stream estar ativo, podemos iniciar o fluxo de dados. 
 
-3) Para enviar a informação , usaremos um dos notebooks do Colab, nomeado como Prod.
-* Primeiramente vamos instalar o boto3 para interagir com os serviços da AWS.
+3) Para gerar e enviar a informação, criaremos um produtor usando um dos notebooks do Colab, nomeado como Prod.
+* Primeiramente vamos instalar o [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) para interagir com os serviços da AWS.
 ```
 !pip install boto3
 ```
@@ -60,6 +59,44 @@ print(resposta)
 Após executar os comandos, será gerado um ShardID, que usaremos nos próximos passos.
 
 ![image](https://github.com/micvet/curso-eng-dados-fa/assets/86981990/67cffe1a-f66b-4e64-a7b4-1c2df25e8372)
+
+4) O próximo passo será criar um cliente, que receberá os dados produzidos pelo Prod.
+* Para isso, usaremos outro notebook, onde primeiramente, iremos realizar a importação do [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
+
+```
+!pip install boto3
+```
+* Agora, iremos realizar a criação e a=confugração da aplicação consumidora.
+* Configurando o acesso ao Kinesis para receber os dados gerados:
+```
+cliente = boto3.client('kinesis',aws_access_key_id='SUA_CHAVE_DE_ACESSO',aws_secret_access_key='SUA-CHAVE-DE-ACESSO-SECRETA',
+                       region_name='us-east-2') #substituia a região, se necessário
+```
+* Usaremos o método get_shard_iterator, que obtém um iterador de fragmento para o fluxo Kinesis especificado. Esse iterador será usado para ler dados do fragmento específico do fluxo. Neste caso, ele obeterá um iterador para o shard com o ID "shardId-000000000002" (que salvamos anteriormanete) do fluxo "flow1" e começará a partir do ponto mais recente (ShardIteratorType='LATEST').
+
+```
+shard = cliente.get_shard_iterator(
+            StreamName="flow1",
+            ShardId = 'shardId-000000000002',
+            ShardIteratorType = 'LATEST'
+            )["ShardIterator"]
+```
+* Na sequência, criaremos um Loop while que continuará enquanto o iterador não for nulo (até que não haja mais registros para ler).
+* Também usaremos o método cliente.get_records(), para obter registros do fragmento. Ele receberá como argumento o iterador atual e retornará um dicionário contendo registros e um novo iterador de fragmento que pode ser usado para recuperar registros subsequentes.
+* O Loop for será usado para retornar os registros do método anterior, get_records(). Ele vai iterar nos registros e printar algumas informações sobre cada um. 
+
+
+```
+while shard is not None:
+  resultado = cliente.get_records(ShardIterator=shard)
+  registros = resultado['Records']
+  shard = resultado["NextShardIterator"]
+  for registro in registros:
+    print(registro["SequenceNumber"])
+    print(registro["ApproximateArrivalTimestamp"])
+    print(registro["PartitionKey"])
+    print(registro["Data"])
+```
 
 
 
