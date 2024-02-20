@@ -85,7 +85,6 @@ shard = cliente.get_shard_iterator(
 * Também usaremos o método cliente.get_records(), para obter registros do fragmento. Ele receberá como argumento o iterador atual e retornará um dicionário contendo registros e um novo iterador de fragmento que pode ser usado para recuperar registros subsequentes.
 * O Loop for será usado para retornar os registros do método anterior, get_records(). Ele vai iterar nos registros e printar algumas informações sobre cada um. 
 
-
 ```
 while shard is not None:
   resultado = cliente.get_records(ShardIterator=shard)
@@ -98,7 +97,10 @@ while shard is not None:
     print(registro["Data"])
 ```
 
+5) Outra opção é criar outro consumidor, o Kinesis Fire House, que recebe o stream e faz a entrega. Usaremos o bucket para receber os dados produzidos.
 
+* Primeiramente, na plataforma AWS, selecione a opção de criar um novo Kinesis Fire House.
+  ![image](https://github.com/micvet/curso-eng-dados-fa/assets/86981990/4fb01f32-367f-4033-88dd-d94b2945553a)
 
 
 
