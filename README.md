@@ -35,5 +35,13 @@ Os módulos do curso estão listados abaixo. Basta selecioná-los para verificar
    <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/93742217-1f62-456b-9946-088c796a62d7' height='250'/>
 <div/><br> 
 
+## 5) [Aplicações em Streaming - Kinesis](https://github.com/micvet/curso-eng-dados-fa/tree/main/app-streaming-kinesis)
+
+### Fluxograma: <br>
+
+<br><div align='left'>
+   <img src='https://github.com/micvet/curso-eng-dados-fa/assets/86981990/cda4fa22-444d-4e89-ac36-c9d3ac83ef2b' height='350'>
+<div/><br>
+
 
 
